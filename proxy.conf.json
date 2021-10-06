@@ -1,0 +1,6 @@
+{
+    "/api/": {
+        "target": "https://facility.dpod.monitafrica.com/",
+        "secure": true
+    }
+}
