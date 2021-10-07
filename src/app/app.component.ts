@@ -14,7 +14,12 @@ export class AppComponent implements OnInit {
 
   dataElements: DataElement[] = [];
   indicators: Indicator[] = [];
-  orgUnits: OrgUnit[] = []
+  orgUnits: OrgUnit[] = [];
+
+  isIndicator = false;
+  isOrgUnit = false;
+  isDataelement = true;
+
 
   constructor(
     public restApi: RestApiService
@@ -53,6 +58,25 @@ export class AppComponent implements OnInit {
       console.log("Org Unit", this.orgUnits)
     })
   }
+  toggleDataElement() {
+    this.isDataelement = true;
+    this.isOrgUnit = false;
+    this.isIndicator = false;
+  }
+   
+  toggleIndicator(){
+    this.isIndicator = true;
+    this.isDataelement = false;
+    this.isOrgUnit = false;
+  }
+
+  toggleOrgUnit(){
+    this.isOrgUnit = true;
+    this.isIndicator = false;
+    this.isDataelement = false;
+  }
+
+
 
 }
 
